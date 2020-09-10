@@ -1,0 +1,16 @@
+Sat May 02 19:22:27 PKT 2020 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Sat May 02 19:22:47 PKT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0171-d5c4-59f2-000046b75ba5 
+on database directory C:\Users\adnan\Documents\NetBeansProjects\SoccerLeagueFX\db_soccer_league with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Program%20Files/NetBeans%208.2/glassfish5/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_251-b08
+user.dir=C:\Program Files\NetBeans 8.2\glassfish5\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\adnan\Documents\NetBeansProjects\SoccerLeagueFX
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sat May 02 20:25:03 PKT 2020: Shutting down Derby engine

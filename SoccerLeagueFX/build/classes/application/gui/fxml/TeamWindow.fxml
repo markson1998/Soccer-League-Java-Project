@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #4c4177;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.gui.fxml.TeamWindowController">
+    <children>
+      <Label fx:id="welcome" alignment="TOP_CENTER" layoutX="38.0" layoutY="30.0" prefHeight="35.0" prefWidth="138.0" text="Teams Data" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="team_table" layoutX="38.0" layoutY="89.0" onMouseClicked="#getSelectedRowData" prefHeight="575.0" prefWidth="947.0">
+        <columns>
+          <TableColumn fx:id="team_name" editable="false" prefWidth="296.0" resizable="false" text="Team Name" />
+            <TableColumn fx:id="team_manager" editable="false" prefWidth="349.0" resizable="false" sortable="false" text="Team Manager" />
+            <TableColumn fx:id="team_jersey_color" editable="false" prefWidth="301.0" resizable="false" sortable="false" text="Team Jersey Color" />
+        </columns>
+      </TableView>
+      <Pane layoutX="1010.0" layoutY="489.0" prefHeight="175.0" prefWidth="337.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="addButton" layoutX="10.0" layoutY="24.0" mnemonicParsing="false" onAction="#addTeamBtn" prefHeight="55.0" prefWidth="148.0" text="ADD TEAM" />
+            <Button fx:id="editButton" layoutX="172.0" layoutY="24.0" mnemonicParsing="false" onAction="#editTeamButtonAction" prefHeight="55.0" prefWidth="148.0" text="EDIT TEAM">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="removeButton" layoutX="10.0" layoutY="96.0" mnemonicParsing="false" onAction="#removeTeamData" prefHeight="55.0" prefWidth="148.0" text="REMOVE TEAM" />
+            <Button fx:id="backButton" layoutX="172.0" layoutY="96.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="55.0" prefWidth="148.0" text="BACK" />
+         </children>
+      </Pane>
+      <Pane layoutX="1010.0" layoutY="87.0" prefHeight="301.0" prefWidth="337.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="44.0" layoutY="48.0" text="Team Name : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="144.0" text="Team Manager : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="97.0" text="Jersey Color : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="updateButton" layoutX="128.0" layoutY="220.0" mnemonicParsing="false" onAction="#updateTeamData" prefHeight="35.0" prefWidth="81.0" text="Update" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="teamNameField" layoutX="136.0" layoutY="45.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="teamJerseyColorField" layoutX="136.0" layoutY="94.0" prefHeight="26.0" prefWidth="180.0" />
+            <Button fx:id="saveButton" layoutX="128.0" layoutY="220.0" mnemonicParsing="false" onAction="#saveTeamData" prefHeight="35.0" prefWidth="81.0" text="Save" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="teamManagerMenu" layoutX="136.0" layoutY="142.0" onAction="#onComboBoxChange" prefHeight="26.0" prefWidth="180.0" promptText="Select Manager" />
+         </children>
+      </Pane>
+      <Label layoutX="1110.0" layoutY="41.0" prefHeight="25.0" prefWidth="138.0" text="Team Information" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

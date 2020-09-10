@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #4c4177;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.gui.fxml.ManagerWindowController">
+    <children>
+      <Label fx:id="welcome" alignment="TOP_CENTER" layoutX="23.0" layoutY="31.0" prefHeight="35.0" prefWidth="161.0" text="Manager Data" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="manager_table" layoutX="23.0" layoutY="89.0" onMouseClicked="#getSelectedRowData" prefHeight="575.0" prefWidth="962.0">
+        <columns>
+          <TableColumn fx:id="manager_firstname" editable="false" onEditCommit="#firstNameCol_onCommit" prefWidth="128.0" resizable="false" text="First Name" />
+            <TableColumn fx:id="manager_middlename" onEditCommit="#middleNameCol_onCommit" prefWidth="128.0" text="Middle Name" />
+            <TableColumn fx:id="manager_lastname" onEditCommit="#lastNameCol_onCommit" prefWidth="145.0" text="Last Name" />
+            <TableColumn fx:id="manager_phone" editable="false" prefWidth="168.0" resizable="false" sortable="false" text="Phone" />
+            <TableColumn fx:id="manager_email" editable="false" prefWidth="214.0" resizable="false" sortable="false" text="Email" />
+            <TableColumn fx:id="manager_dob" editable="false" prefWidth="98.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="DOB" />
+            <TableColumn fx:id="manager_rating" editable="false" onEditCommit="#ratingCol_onCommit" resizable="false" style="-fx-alignment: center;" text="Rating" />
+        </columns>
+      </TableView>
+      <Pane layoutX="1010.0" layoutY="489.0" prefHeight="175.0" prefWidth="337.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="addButton" layoutX="10.0" layoutY="24.0" mnemonicParsing="false" onAction="#addManagerBtn" prefHeight="55.0" prefWidth="148.0" text="ADD MANAGER" />
+            <Button fx:id="editButton" layoutX="172.0" layoutY="24.0" mnemonicParsing="false" onAction="#editManagerButtonAction" prefHeight="55.0" prefWidth="148.0" text="EDIT MANAGER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="removeButtton" layoutX="10.0" layoutY="96.0" mnemonicParsing="false" onAction="#removeManagerData" prefHeight="55.0" prefWidth="148.0" text="REMOVE" />
+            <Button fx:id="backButton" layoutX="172.0" layoutY="96.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="55.0" prefWidth="148.0" text="BACK" />
+         </children>
+      </Pane>
+      <Pane layoutX="1010.0" layoutY="87.0" prefHeight="393.0" prefWidth="337.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="56.0" layoutY="36.0" text="First Name : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="75.0" text="Middle Name : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="115.0" text="Last Name : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="152.0" text="Phone : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="192.0" text="Email : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="97.0" layoutY="229.0" text="DOB : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="266.0" text="Star Rating : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="302.0" text="Team To Manage : " textFill="#4c4177">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="updateButton" layoutX="125.0" layoutY="344.0" mnemonicParsing="false" onAction="#updateManagerData" prefHeight="35.0" prefWidth="81.0" text="Update" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="firstNameField" layoutX="141.0" layoutY="33.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="middleNameField" layoutX="141.0" layoutY="72.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="lastNameField" layoutX="141.0" layoutY="112.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="phoneField" layoutX="141.0" layoutY="149.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="emailField" layoutX="141.0" layoutY="189.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="dobField" layoutX="141.0" layoutY="226.0" prefHeight="26.0" prefWidth="180.0" />
+            <TextField fx:id="starRatingField" layoutX="141.0" layoutY="263.0" prefHeight="26.0" prefWidth="180.0" />
+            <Button fx:id="saveButton" layoutX="128.0" layoutY="344.0" mnemonicParsing="false" onAction="#saveManagerData" prefHeight="35.0" prefWidth="81.0" text="Save" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="teamToManageMenu" layoutX="141.0" layoutY="300.0" onAction="#onChangeComboBox" prefHeight="26.0" prefWidth="180.0" promptText="Select Team" />
+         </children>
+      </Pane>
+      <Label layoutX="1093.0" layoutY="41.0" prefHeight="25.0" prefWidth="171.0" text="Manager Information" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
